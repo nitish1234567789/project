@@ -1,0 +1,163 @@
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <script>
+                function validateForm() {
+                        var x = document.forms["myForm"]["email"].value;
+                        if (x == "") {
+                                alert("Please Enter Email");
+                         return false;
+                        }
+                        var y = document.forms["myForm"]["psw"].value;
+                        if (y == "") {
+                                alert("Please Enter Password");
+                                return false;
+                        }
+                }
+        </script>
+        <style>
+                body
+{
+margin: 0;
+padding: 0;
+background-image: url("3.jpg");
+background-size: cover;
+background-position: center;
+font-family: sans serif;
+}
+.loginbox
+{
+	width:320px;
+	height:400px;
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+	top:50%;
+	left:50%;
+	position:absolute;
+	transform:translate(-50%,-50%);
+	box-sizing:border-box;
+	padding:70px 30px; 
+}
+	   h1
+	   {
+		   margin:0;
+		   padding:0 0 20px;
+		   text-align:center;
+		   font-size:41px;
+	   }
+	   .loginbox p{
+		   margin:0;
+		   padding:0;
+		   font-weight:bold;
+	   }
+	   .loginbox input{
+		   width:100%;
+		   margin-bottom:20px;
+	   }
+	   .loginbox input[type="text"], input[type="password"]
+	   {
+		   border:none;
+		   border-bottom:1px solid #fff;
+		   background:transparent;
+		   outline:none;
+		   height:40px;
+		   color:#fff;
+		   font-size:16px;
+	   }
+	   .loginbox input[type="submit"]
+	   {
+		   border:none;
+		   outline:none;
+		   height:40px;
+		   background:#fb2525;
+		    color:#fff;
+			font-size:18px;
+			border-radius:20px;
+	   }
+	   .loginbox input[type="submit"]:hover
+	   {
+		 cursor:pointer;
+		 background:#ffc107;
+		 color:#000;
+	   }
+.loginbox a{
+text-decoration:none;
+font-size:12px;
+line-height:20px;
+color:darkgrey;
+} 	
+	.loginbox a:hover
+	{
+		color:#ffc107;
+	}  
+	.container{
+		position: fixed; 
+		top: 0%; 
+		left: 0%; 
+		width: 100%; 
+		height: 100%;
+		/* background-color: black; */
+	}
+	
+.flex-container {
+  display: flex;
+  background-color:transparent;
+justify-content: center;
+
+}
+
+.flex-container > div {
+  background:transparent;
+  margin-top: 60px;
+  padding: 30px;
+  font-size: 30px;
+  color:white;
+}
+
+	@media screen and (max-width:500px)
+	{
+		body
+		{
+			background-image: url('2.jpg');
+		}
+	}
+	/*@media screen and (max-width:400px)
+	{
+		body
+		{
+			background-image: url('red.jpg');}
+		}
+	}*/
+        </style>
+</head>
+
+<body id="body">
+        <div class="container">
+                <div class="loginbox">
+                        <h1 id="login-font">Login Here</h1>
+                        <form name="myForm" action="/action_page.php" method="post" onsubmit="return validateForm()" >
+                                <p>Email</p>
+                                <input type="text" name="email" placeholder="Enter Username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                                <p>Password</p>
+                                <input type="password" id="psw" name="psw" placeholder="Enter Password"
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+                                <input type="submit" value="Submit">
+                               
+                                <a href="signup.html">Don't have an account?Sign Up!</a><br>
+                                <a href="pass.html">Forgot Password?</a>
+                        </form>
+                </div>
+<div class="flex-container">
+    <div>Log In</div>
+<div a href="signup.html">Sign Up!</a></div>
+    
+</div>
+        </div>
+
+        
+
+</body>
+
+</html>
